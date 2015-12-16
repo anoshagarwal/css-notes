@@ -1,0 +1,156 @@
+/*
+selector {
+	property: value;
+}
+
+selector can be any html element like p, img, table etc */
+
+/* COLOR is based on hexadecimal coding; start with # followed by 6 
+digits; each digit can be a number from 0 to 9 or letters from a to f
+*/
+
+/* The font-size unit em is a relative measure: one em is equal to 
+the default font size on whatever screen the user is using. That 
+makes it great for smartphone screens, since it doesn't try to 
+tell the smartphone exactly how big to make a font: it just 
+says, "Hey, 1em is the font size that you normally use, so 2em 
+is twice as big and 0.5em is half that size!" */
+
+p{
+	border: 1px solid #111111;
+}
+
+/* Styling a link; normally link will be blue and underlined */
+a{
+	text-decoration: none;
+	color: red;
+}
+
+
+/*DESIGN A BUTTON -- put <a> link inside div tags */
+div { 
+	height: 100px;
+	width: 100px;
+	background-color: red;
+	border: 2px solid black;
+	border-radius: 5px;
+	margin: auto; /* auto -> equal margins on each side; 
+	top right bottom left */
+	text-align: center; /* right/ left/ center */
+
+}
+
+/* UNIVERAL SELECTOR-> apply CSS styling to all elements of page */
+* {
+	border: 2px solid #123efa; 
+}
+
+/*TARGETING SELECTORS/ Nested selectors */
+div p {
+	/*Target all p's that are children of div */
+}
+div div p{
+	/*Target the p nested after div div */
+}
+
+div > p {
+	/* only target p next to div */
+}
+
+/*certain selectors will "override" others if they have a greater 
+specificity value. ul li p { is more specific CSS than just 
+p {, so when CSS sees tags that are both <p> tags and happen to 
+be inside unordered lists, it will apply the more specific 
+styling (ul li p {) to the text inside the lists. */
+
+/* There are two selectors that are even more specific than
+ nested selectors like the ones above: classes and IDs. */ 
+
+/* class */
+.Addidas {
+
+}
+
+/*ID*/
+#Reebok{
+
+
+/*Pseudo-class_selector 
+There are a number of useful pseudo-class selectors for links, 
+including:
+
+a:link -> An unvisited link.
+a:visited -> A visited link.
+a:hover -> A link you're hovering your mouse over.
+p:first-child
+p:nth-child(4)
+*/
+a:hover {
+	color: green;
+}
+
+/* POSITIONING 
+the first positioning property we'll learn is the display property.
+We'll learn about four possible values.
+
+block: This makes the element a block box. It won't let anything
+sit next to it on the page! It takes up the full width.
+
+inline-block: This makes the element a block box, but will allow
+other elements to sit next to it on the same line.
+
+inline: This makes the element sit on the same line as another 
+element, but without formatting it like a block. It only takes
+up as much width as it needs (not the whole line).
+
+none: This makes the element and its content disappear from the
+page entirely!
+*/
+div {
+	display: inline-block;
+} 
+
+/*
+BOX MODEL
+Each box is made of layers. From the outermost to the innermost:
+
+The margin is the space around the element. The larger the margin,
+the more space between our element and the elements around it. 
+We can adjust the margin to move our HTML elements closer to or 
+farther from each other.
+
+The border is the edge of the element. It's what we've been making
+ visible every time we set the border property.
+
+The padding is the spacing between the content and the border. 
+We can adjust this value with CSS to move the border closer to 
+or farther from the content.
+
+The content is the actual "stuff" in the box. If we're talking 
+about a <p> element, the "stuff" is the text of the paragraph.
+
+we can adjust the top, right, left, and bottom padding, border, 
+and margin individually.
+*/
+
+/*MARGIN */
+
+div {
+	margin: auto;
+	margin-top: ;
+	margin-right: ;
+	margin-bottom: ;
+	margin-left: ;
+	margin: 1px 2px 3px 4px;
+	margin: 10px; /* same value for all 4 sides */
+}
+
+div {
+	padding: 
+}
+
+div {
+	float: right /left;
+	clear: both/ right/ left;
+	position: absolute/ relative/ fixed ;
+}
